@@ -45,8 +45,10 @@ $lib_pkgs_purged = ['libreoffice',
 	'libreoffice-ogltrans',
 	'libreoffice-pdfimport',
 	'libreoffice-style-galaxy',
-	"libreoffice-help-${lib_lang}",
-	"libreoffice-l10n-${lib_lang}"]
+	# "libreoffice-help-${lib_lang}",
+	"libreoffice-help-en-us",
+	# "libreoffice-l10n-${lib_lang}"]
+	"libreoffice-l10n-en-us"]
 
 # Somes releases require the core and others packages, which can be placed here:
 $quantal_pkgs = ['libreoffice',
@@ -54,14 +56,18 @@ $quantal_pkgs = ['libreoffice',
 	'libreoffice-gnome',
 	'libreoffice-ogltrans',
 	'libreoffice-pdfimport',
-	"libreoffice-help-${lib_lang}",
-	"libreoffice-l10n-${lib_lang}"]
+	# "libreoffice-help-${lib_lang}",
+	"libreoffice-help-en-us",
+	# "libreoffice-l10n-${lib_lang}"]
+	"libreoffice-l10n-en-us"]
 
 $lib_pkgs = ['libreoffice',
 	'libreoffice-ogltrans',
 	'libreoffice-pdfimport',
-	"libreoffice-help-${lib_lang}",
-	"libreoffice-l10n-${lib_lang}"]
+	# "libreoffice-help-${lib_lang}",
+	"libreoffice-help-en-us",
+	# "libreoffice-l10n-${lib_lang}"]
+	"libreoffice-l10n-en-us"]
 
  case $::lsbdistcodename {
 	'quantal': { 
