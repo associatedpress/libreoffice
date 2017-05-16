@@ -18,24 +18,32 @@ class libreoffice::repos (
       include apt
 
       apt::source {'libreoffice':
-        location    => "http://ppa.launchpad.net/libreoffice/${lib_repo}/ubuntu",
-        release     => $::lsbdistcodename,
-        repos       => 'main',
-        id          => '36E81C9267FD1383FCC4490983FBA1751378B444',
-        server      => 'keyserver.ubuntu.com',
-        include_src => true
+        location => "http://ppa.launchpad.net/libreoffice/${lib_repo}/ubuntu",
+        release  => $::lsbdistcodename,
+        repos    => 'main',
+        key      => {
+          id     => '36E81C9267FD1383FCC4490983FBA1751378B444',
+          server => 'keyserver.ubuntu.com',
+        },
+        include  => {
+          src    => true
+        }
       }
     }
     'LinuxMint': {
       include apt
 
       apt::source {'libreoffice-mint':
-        location    => "http://ppa.launchpad.net/libreoffice/${lib_repo}/ubuntu",
-        release     => 'precise',
-        repos       => 'main',
-        id          => '36E81C9267FD1383FCC4490983FBA1751378B444',
-        server      => 'keyserver.ubuntu.com',
-        include_src => true
+        location => "http://ppa.launchpad.net/libreoffice/${lib_repo}/ubuntu",
+        release  => 'precise',
+        repos    => 'main',
+        key      => {
+          id     => '36E81C9267FD1383FCC4490983FBA1751378B444',
+          server => 'keyserver.ubuntu.com',
+        },
+        include  => {
+          src => true
+        }
       }
     }
 
